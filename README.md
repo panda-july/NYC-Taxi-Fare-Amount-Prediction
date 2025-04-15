@@ -198,11 +198,11 @@ In this fictional scenario, the New York City Taxi and Limousine Commission (TLC
     * champion model mean distance, speed, duration group by unit:PU_DO_LocationID + PU_hour_class
     * Champion model score
 
-|Score	|R-squared	|MSE	    |MAE        | 
-|:-     |:-         |:-         |:-         |
-|Train  |0.955608	|4.801582	|1.261479   |
-|Val    |0.860884	|11.064115	|2.194817   |
-|Test	|0.837947	|13.425096	|2.249483   |
+|Score	|R-squared |Adjusted R-squared|MSE	     |MAE        |AIC        |BIC          |
+|:-     |:-        |:-                |:-        |:-         |:-         |:-           |
+|Train  |0.955608  |0.955595          |4.801582	 |1.261479   |57972.936530|58010.358556|
+|Val    |0.860884  |0.860649          |11.064115 |2.194817   |12464.003707|12492.869575|
+|Test	|0.837947  |0.837794          |13.425096 |2.249483   |23065.281979|23097.045930|
 
 * Build XGBoost Regression model
     * train and val scores of XGBoost models
@@ -235,19 +235,7 @@ In this fictional scenario, the New York City Taxi and Limousine Commission (TLC
         * Assumptions: system issues, test data, special business flow/service(duration were around 12 hours or 24 hours)
         * Recommendation: further investigate and analyze the reason.
 
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">

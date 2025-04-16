@@ -25,7 +25,8 @@ For any inquiries, please contact me at liucheng.july@outlook.com.
 | `LICENSE`                | Code License for the code within these Jupyter Notebooks for purpose of evaluation by potential employers. |
 | `LICENSE-NON-CODE`       | License for the ideas, documentation, and explanations within these Jupyter Notebooks  |
 | `code/`                 | Jupyter Notebooks of my data projects |
-| `code/taxi-fareamount-prediction-eda.ipynb`  | Jupyter Notebook of EDA|
+| `code/taxi-fareamount-prediction-eda.ipynb`  | Jupyter Notebook of EDA(RatecodeID proportion similar to yellow taxi trips in 2017)|
+| `code/taxi-fareamount-prediction-eda-equal-ratecodeid.ipynb`  | Jupyter Notebook of EDA(Equal RatecodeID proportion, different from yellow taxi population proportion in 2017)|
 | `code/nyc-taxi-fare-amount-linear-regression.ipynb`  | Jupyter Notebook of linear regression model|
 | `code/nyc-taxi-fare-amount-random-forest-regression.ipynb`  | Jupyter Notebook of random forest regression model|
 | `code/nyc-taxi-fare-amount-xgboost-regression.ipynb` | Jupyter Notebook of XGBoost regression model|
@@ -218,7 +219,7 @@ In this fictional scenario, the New York City Taxi and Limousine Commission (TLC
 * The bellowing table is check result of data check
     * Around 1.53% of trips contained taxi zone 264(unknown) with different RatecodeID
         * Assumptions: geo and taxi zone mapping table is not complete, network issue
-        * Recommendation: further investigate and analyze the reason, it it due to incomplete mapping table update mapping table, if it due to network issue, keep watching the count.
+        * Recommendation: further investigate and analyze the reason, if it due to incomplete mapping table update mapping table, if it due to network issue, keep watching the count.
     * Around 2% of trips rush hour surcharge and night time surcharge didn’t follow the TLC rule. 
         * Assumptions: timer/clock setting is incorrect(e.g. time synchronization issue, summer time/winter time setting inccorect, machine issue) , holiday setting is incorrect
         * Recommendation: further investigate and analyze the reason.<BR/> If it due to incorrect setting we could consider monitor this issue, add time setting check to taxi inspection check list or add it to driver training course. 
@@ -332,7 +333,9 @@ In this fictional scenario, the New York City Taxi and Limousine Commission (TLC
     </tr>
   </tbody>
 </table>
-* The above data is 22629, the result of deleting incorrect start,end time trips
+* The above data is 22629, the result of deleting incorrect start,end time trips and unequal total_amount
+
+* There were 43 trips total_amount not equal to fare_amount+extra+mta_tax+tip_amount+tolls_amount. All of them were Vendor 2 trips and the differences appeared to have patterns, it might indicate Vendor 2 had some special logics, fares in this logic were not reflected in the dataset. Recommend to further investigate and analyze the reasons.
 
 
 * Other business recommendation:

@@ -1,0 +1,17 @@
+Date,Holiday,Day_of_the_week,Type
+2017-01-01,New Year's Day,Sunday,Federal holidays
+2017-01-02,New Year's Day (observed),Monday,Federal holidays
+2017-01-16,Martin Luther King Day,Monday,Federal holidays
+2017-02-12,Lincoln's Birthday,Sunday,State Holiday
+2017-02-13,Lincoln's Birthday observed,Monday,State Holiday
+2017-02-20,Presidents' Day,Monday,Federal holidays
+2017-05-29,Memorial Day,Monday,Federal holidays
+2017-06-19,Juneteenth Freedom Day,Monday,State Holiday
+2017-07-04,Independence Day,Tuesday,Federal holidays
+2017-09-04,Labor Day,Monday,Federal holidays
+2017-10-09,Columbus Day,Monday,Federal holidays
+2017-11-07,Election Day,Tuesday,State Holiday
+2017-11-10,Veterans Day (observed),Friday,Federal holidays
+2017-11-11,Veterans Day,Saturday,Federal holidays
+2017-11-23,Thanksgiving Day,Thursday,Federal holidays
+2017-12-25,Christmas Day,Monday,Federal holidays
